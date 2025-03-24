@@ -1,0 +1,282 @@
+/* Reset mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f4f8; /* Màu nền nhẹ cho toàn trang */
+}
+
+/* 1. Header chính */
+.main-header {
+    background: linear-gradient(135deg, #2c3e50, #4a6278); /* Gradient xanh đậm */
+    color: #ecf0f1; /* Chữ trắng nhạt */
+    text-align: center;
+    padding: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%; /* Đảm bảo full width */
+    border-radius: 0 0 8px 8px; /* Bo tròn góc dưới */
+}
+
+/* 2. Section chính */
+.main-section {
+    background-color: #ffffff; /* Nền trắng */
+    margin: 1rem auto; /* Căn giữa */
+    padding: 1.5rem;
+    width: 90%; /* Giới hạn chiều rộng */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* 3. Header trong section */
+.section-header {
+    background: linear-gradient(135deg, #3498db, #5dade2); /* Gradient xanh dương */
+    color: #ffffff;
+    text-align: center;
+    padding: 0.8rem;
+    border-radius: 8px; /* Bo tròn đồng đều */
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Container cho nav, article và aside */
+.container {
+    display: flex;
+    gap: 1rem;
+    width: 100%; /* Đảm bảo full width trong section */
+    flex-grow: 1; /* Đảm bảo container chiếm không gian còn lại trong section */
+    align-items: stretch; /* Đảm bảo các phần tử con có chiều cao bằng nhau */
+    justify-content: space-between; /* Đảm bảo các phần tử được căn đều trong container */
+    background-color: #f9f9f9; /* Nền xám nhạt để tạo khung thống nhất */
+    padding: 1rem; /* Thêm padding để tạo khung bao quanh */
+    border-radius: 8px; /* Bo tròn khung */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Thêm shadow cho khung */
+}
+
+/* 4. Nav (thanh điều hướng bên trái) */
+.sidebar-nav {
+    flex: 0 0 20%; /* Đảm bảo chiều rộng chính xác */
+    background: linear-gradient(135deg, #34495e, #4b5e72); /* Gradient xanh xám */
+    padding: 1.5rem;
+    border-radius: 8px; /* Bo tròn đồng đều */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 0; /* Đảm bảo không có khoảng cách thừa */
+}
+
+.sidebar-nav h3 {
+    color: #ecf0f1;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    flex-grow: 1; /* Đảm bảo ul chiếm không gian còn lại */
+}
+
+.sidebar-nav ul li {
+    margin: 0.8rem 0;
+}
+
+.sidebar-nav ul li a {
+    text-decoration: none;
+    color: #bdc3c7; /* Chữ xám nhạt */
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease; /* Hiệu ứng hover */
+    display: block;
+    padding: 0.3rem 0;
+}
+
+.sidebar-nav ul li a:hover {
+    color: #3498db; /* Màu xanh dương khi hover */
+    transform: translateX(5px); /* Dịch chuyển nhẹ khi hover */
+}
+
+/* 5. Article (nội dung chính) */
+.main-article {
+    flex: 0 0 60%; /* Đảm bảo chiều rộng chính xác */
+    background-color: #ffffff; /* Nền trắng để nổi bật trong khung */
+    padding: 1.5rem;
+    border-radius: 8px; /* Bo tròn đồng đều */
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 0; /* Đảm bảo không có khoảng cách thừa */
+}
+
+.main-article div {
+    margin-bottom: 2rem;
+}
+
+.main-article h3 {
+    color: #2c3e50; /* Màu xanh đậm */
+    margin: 0.8rem 0;
+    font-size: 1.4rem;
+    border-bottom: 2px solid #3498db; /* Đường viền dưới tiêu đề */
+    padding-bottom: 0.3rem;
+}
+
+.main-article p {
+    color: #7f8c8d; /* Chữ xám */
+    margin: 0.5rem 0;
+}
+
+.main-article h4 {
+    color: #e74c3c; /* Màu đỏ cam */
+    margin-top: 0.5rem;
+}
+
+/* 6. Aside (thanh bên phải) */
+.sidebar-aside {
+    flex: 8 0 14%; /* Đảm bảo chiều rộng chính xác */
+    background: linear-gradient(135deg, #34495e, #4b5e72); /* Gradient xanh xám */
+    padding: 1.5rem;
+    border-radius: 8px; /* Bo tròn đồng đều */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    align-self: stretch; /* Đảm bảo aside căng đều theo chiều cao của container */
+    margin: 0; /* Đảm bảo không có khoảng cách thừa */
+}
+
+/* Đảm bảo nội dung trong aside không bị lệch */
+.sidebar-aside h3 {
+    color: #ecf0f1;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.sidebar-aside ul {
+    list-style: none;
+    flex-grow: 1; /* Đảm bảo ul chiếm không gian còn lại */
+}
+
+.sidebar-aside ul li {
+    margin: 0.8rem 0;
+}
+
+.sidebar-aside ul li a {
+    text-decoration: none;
+    color: #bdc3c7;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: block;
+    padding: 0.3rem 0;
+}
+
+.sidebar-aside ul li a:hover {
+    color: #3498db;
+    transform: translateX(5px);
+}
+
+/* Form trong article */
+form {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff; /* Nền trắng cho form */
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin: 0.8rem 0 0.3rem;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+/* Căn chỉnh các input và select */
+form input[type="text"],
+form input[type="email"],
+form input[type="date"],
+form input[type="number"],
+form select {
+    width: 100%;
+    padding: 0.6rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus,
+form select:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+    outline: none;
+}
+
+/* Căn chỉnh checkbox và radio button */
+form .checkbox-group,
+form .radio-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+}
+
+form .checkbox-group label,
+form .radio-group label {
+    display: flex;
+    align-items: center;
+    margin: 0.3rem 0;
+}
+
+form input[type="checkbox"],
+form input[type="radio"] {
+    margin-right: 0.5rem;
+    width: auto; /* Đảm bảo checkbox/radio không bị kéo dãn */
+}
+
+/* Căn chỉnh button */
+form button {
+    background: linear-gradient(135deg, #e74c3c, #c0392b); /* Gradient đỏ cam */
+    color: #ffffff;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    align-self: flex-start; /* Căn button về bên trái */
+    margin-top: 0.5rem;
+}
+
+form button:hover {
+    transform: translateY(-2px); /* Nâng nhẹ khi hover */
+    box-shadow: 0 4px 10px rgba(231, 76, 60, 0.3);
+}
+
+/* 7. Footer trong section */
+.section-footer {
+    background: linear-gradient(135deg, #3498db, #5dade2); /* Gradient xanh dương */
+    color: #ffffff;
+    text-align: center;
+    padding: 0.8rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 8. Footer chính */
+.main-footer {
+    background: linear-gradient(135deg, #2c3e50, #4a6278); /* Gradient xanh đậm */
+    color: #ecf0f1;
+    text-align: center;
+    padding: 1.5rem;
+    width: 90%; /* Căn giữa giống section */
+    margin: 1rem auto;
+    border-radius: 8px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
