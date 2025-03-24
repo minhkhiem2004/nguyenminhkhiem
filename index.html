@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Web Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Câu 1: Xây dựng khung giao diện trang web -->
+    <!-- 1. Header chính -->
+    <header class="main-header">
+        <h1>Trang Web Demo</h1>
+    </header>
+
+    <!-- 2. Section chính -->
+    <section class="main-section">
+        <!-- 3. Header phụ trong section -->
+        <header class="section-header">
+            <h2>Chào mừng đến với trang web của chúng tôi</h2>
+        </header>
+
+        <!-- Container cho nav, article và aside -->
+        <div class="container">
+            <!-- 4. Nav (thanh điều hướng bên trái) -->
+            <nav class="sidebar-nav">
+                <h3>Điều Hướng</h3>
+                <ul>
+                    <li><a href="#home">Trang Chủ</a></li>
+                    <li><a href="#products">Sản Phẩm</a></li>
+                    <li><a href="#form">Đặt Tour</a></li>
+                    <li><a href="#contact">Liên Hệ</a></li>
+                </ul>
+            </nav>
+
+            <!-- 5. Article (nội dung chính) -->
+            <article class="main-article">
+                <!-- Câu 2: Nội dung chi tiết về sản phẩm -->
+                <div id="products">
+                    <h3>VESTIBULUM ULLAMCORPER UT LEO QUIS</h3>
+                    <p>Aerean tecilisis lectus arte, ur rutrum eros comralis et.</p>
+                    <p>Vestibulum ullamcorper ut leo quis tristique. Donec in erat commodo, pharetra purus ac, consectetur lacus. Suspendisse odio sapien, egestas at ex sit amet, molestie sagittis est.</p>
+                    <p>In id purus imperdiet nisl accumsan scelerisque. Donec nec justo sed enim dapibus rhoncus. Morbi sed elit vitae metus ullamcorper efficitur.</p>
+                    <p>Fusce aliquam magna id ipsum ultricies interdum. Maecenas nibh risus.</p>
+                    <h4>DETAIL</h4>
+                </div>
+
+                <!-- Câu 3: Biểu mẫu đặt tour -->
+                <div id="form">
+                    <h3>Travel Reservation Form</h3>
+                    <form>
+                        <label for="fullname">Full Name*:</label><br>
+                        <input type="text" id="fullname" name="fullname" placeholder="FirstName LastName" required><br>
+
+                        <label for="email">Email Address*:</label><br>
+                        <input type="email" id="email" name="email" placeholder="EMAIL_ADDRESS" required><br>
+
+                        <label for="tour">Select Tour Package*:</label><br>
+                        <select id="tour" name="tour" required>
+                            <option value="goa">Goa</option>
+                        </select><br>
+
+                        <label for="arrival">Arrival Date*:</label><br>
+                        <input type="date" id="arrival" name="arrival" required><br>
+
+                        <label for="persons">Number of Persons*:</label><br>
+                        <input type="number" id="persons" name="persons" required><br>
+
+                        <label>What would you want to avail?*:</label><br>
+                        <div class="checkbox-group">
+                            <label><input type="checkbox" name="avail" value="boarding"> Boarding</label><br>
+                            <label><input type="checkbox" name="avail" value="fooding"> Fooding</label><br>
+                            <label><input type="checkbox" name="avail" value="sightseeing"> Sight Seeing</label><br>
+                        </div>
+
+                        <label for="coupon">Discount Coupon Code:</label><br>
+                        <input type="text" id="coupon" name="coupon"><br>
+
+                        <label>Terms and Conditions*:</label><br>
+                        <div class="radio-group">
+                            <label><input type="radio" name="terms" value="agree" required> I agree</label>
+                            <label><input type="radio" name="terms" value="disagree"> I disagree</label>
+                        </div>
+
+                        <button type="submit">Complete Reservation</button>
+                    </form>
+                </div>
+            </article>
+
+            <!-- 6. Aside (thanh bên phải) -->
+            <aside class="sidebar-aside">
+                <h3>Danh Mục</h3>
+                <ul>
+                    <li><a href="#">Danh mục 1</a></li>
+                    <li><a href="#">Danh mục 2</a></li>
+                    <li><a href="#">Danh mục 3</a></li>
+                </ul>
+            </aside>
+        </div>
+
+        <!-- 7. Footer trong section -->
+        <footer class="section-footer">
+            <p>Footer trong Section</p>
+        </footer>
+    </section>
+
+    <!-- 8. Footer chính -->
+    <footer class="main-footer">
+        <p>© 2025 Trang Web Demo. All rights reserved.</p>
+    </footer>
+    <!-- Kết thúc Câu 1 -->
+</body>
+</html>
